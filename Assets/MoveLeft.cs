@@ -15,6 +15,6 @@ public class MoveLeft : MonoBehaviour
     void Update()
     {
         speed += speedIncrease * Time.deltaTime;
-        transform.Translate(Vector3.forward * Time.deltaTime*speed);
+        transform.Translate(-Vector3.forward * Time.deltaTime*speed,Space.World);
     }
 }
