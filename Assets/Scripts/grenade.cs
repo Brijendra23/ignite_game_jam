@@ -11,8 +11,8 @@ public class grenade : MonoBehaviour
     void Start()
     {
         target = GameObject.FindGameObjectWithTag("Player").transform;
-        
-        pos.x=target.position.x;
+
+        pos.x = target.position.x;
         pos.y = target.position.y + 50f;
         pos.z = target.position.z;
     }
@@ -25,13 +25,11 @@ public class grenade : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        if(other.tag=="Player")
+        if (other.tag == "Player")
         {
-            print("hello");
             Destroy(gameObject);
-            other.gameObject.GetComponent<Animator>().SetBool("Death_b", true);
-            other.gameObject.GetComponent<Animator>().SetInteger("DeathType_int", 2);
             
         }
     }
+    
 }

@@ -4,13 +4,12 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using TMPro;
 
-public class DialogueController : MonoBehaviour
+public class AftermathDialogue : MonoBehaviour
 {
     public TextMeshProUGUI dialogueText;
     public string[] Sentences;
     private int Index = 0;
     public float dialogueSpeed;
-    public Animator anim;
     private bool startDialogue=true;
     private bool isWriting = false;
 
@@ -18,11 +17,6 @@ public class DialogueController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        if (startDialogue)
-        {
-            anim.SetTrigger("entry");
-            startDialogue = false;
-        }
         isWriting = true;
         NextSentence();
 
@@ -46,12 +40,6 @@ public class DialogueController : MonoBehaviour
         {
             dialogueText.text = "";
             StartCoroutine(WriteSentence());
-        }
-        else
-        {
-            dialogueText.text = "";
-            anim.SetTrigger("exit");
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
     }
     IEnumerator WriteSentence()

@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+
 
 public class Bomb : MonoBehaviour
 {
@@ -47,6 +49,14 @@ public class Bomb : MonoBehaviour
                     rb.AddExplosionForce(force, transform.position, radius);
                 }
             }
+            other.gameObject.GetComponent<Animator>().SetBool("Death_b", true);
+            other.gameObject.GetComponent<Animator>().SetInteger("DeathType_int", 2);
+            StartCoroutine(Death());
         }
+    }
+    IEnumerator Death()
+    {
+        yield return new WaitForSeconds(2.5f);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 }

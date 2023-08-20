@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
-using UnityEngine.SceneManagement;
 
 public class finalCutsceneDialogue : MonoBehaviour
 {
@@ -52,7 +51,6 @@ public class finalCutsceneDialogue : MonoBehaviour
         {
             dialogueText.text = "";
             dialogueAnim.SetTrigger("exit");
-            //SceneManager.LoadScene("SampleScene");
             enemyAnim.SetInteger("WeaponType_int", 10);
             StartCoroutine(Grenade());
         }
