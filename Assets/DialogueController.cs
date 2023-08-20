@@ -12,6 +12,8 @@ public class DialogueController : MonoBehaviour
     public float dialogueSpeed;
     public Animator anim;
     private bool startDialogue=true;
+    private bool isWriting = false;
+
 
     // Start is called before the first frame update
     void Start()
@@ -21,6 +23,7 @@ public class DialogueController : MonoBehaviour
             anim.SetTrigger("entry");
             startDialogue = false;
         }
+        isWriting = true;
         NextSentence();
 
     }
@@ -28,9 +31,13 @@ public class DialogueController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Space))
+        if (!isWriting)
         {
-            NextSentence();
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                isWriting = true;
+                NextSentence();
+            }
         }
     }
     void NextSentence()
@@ -55,5 +62,7 @@ public class DialogueController : MonoBehaviour
             yield return new WaitForSeconds(dialogueSpeed);
         }
         Index++;
+        isWriting = false;
+
     }
 }
