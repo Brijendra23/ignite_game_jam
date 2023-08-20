@@ -22,39 +22,42 @@ public class Movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
         // just to get user input from wasd or arrow keys
 
         Vector3 player_position = transform.position;
         if(Input.GetKeyDown(KeyCode.RightArrow))
         {
             if (left)
-            {
-                player_position.x = 0;
-                middle = true;
-                left = false;
-            }
-            else if (middle)
-            {
-                player_position.x = 10;
-                right = true;
-                middle = false;
-            }
+             {
+                 player_position.x = 0;
+                 middle = true;
+                 left = false;
+             }
+             else if (middle)
+             {
+                 player_position.x = 10;
+                 right = true;
+                 middle = false;
+             }
+            
 
         }
         else if (Input.GetKeyDown(KeyCode.LeftArrow))
         {
             if (right)
-            {
-                player_position.x = 0;
-                middle = true;
-                right = false;
-            }
-            else if (middle)
-            {
-                player_position.x = -10;
-                left = true;
-                middle = false;
-            }
+             {
+                 player_position.x = 0;
+                 middle = true;
+                 right = false;
+             }
+             else if (middle)
+             {
+                 player_position.x = -10;
+                 left = true;
+                 middle = false;
+             }
+            
         }
         player_position.z += Time.deltaTime * speed;
         if (Input.GetButtonDown("Jump"))
