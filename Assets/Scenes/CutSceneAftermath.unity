@@ -2173,7 +2173,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1948092872}
-  - component: {fileID: 1948092871}
+  - component: {fileID: 1948092873}
   m_Layer: 0
   m_Name: DialogueController
   m_TagString: Untagged
@@ -2181,23 +2181,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1948092871
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1948092870}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f3cfced2ce4710642ac5aa4cb499b80b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialogueText: {fileID: 1231272678}
-  Sentences:
-  - Thank God it was just a nightmare!
-  dialogueSpeed: 0.05
-  anim: {fileID: 1762477626}
 --- !u!4 &1948092872
 Transform:
   m_ObjectHideFlags: 0
@@ -2213,3 +2196,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1948092873
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1948092870}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3cfced2ce4710642ac5aa4cb499b80b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueText: {fileID: 1231272678}
+  Sentences:
+  - Thank God it was just a nightmare!
+  dialogueSpeed: 0.03
+  anim: {fileID: 1762477626}

@@ -2193,7 +2193,7 @@ MonoBehaviour:
   Sentences:
   - Oh Shit! I am late for work!!
   - I gotta RUN!!!
-  dialogueSpeed: 0.05
+  dialogueSpeed: 0.03
   anim: {fileID: 1762477626}
 --- !u!4 &1948092872
 Transform:

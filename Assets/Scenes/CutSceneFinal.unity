@@ -512,7 +512,7 @@ MonoBehaviour:
   - But you refuse to die.
   - I will kill you!!!
   - I will have my promotion!!!!
-  speed: 0.0001
+  speed: 0.03
   dialogueAnim: {fileID: 1981121366}
   enemyAnim: {fileID: 318415871}
   grenade: {fileID: 7421037314281459095, guid: 87e9231213ec44719864caab8127dd3b, type: 3}
@@ -741,6 +741,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1068730297
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1068730291}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5209ac40e286ce9409920a6fa0d0a9b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  explosion: {fileID: 1000011797152326, guid: acf39d9f4addf294d93fa56fa373961b, type: 3}
+  pos: {x: 41, y: 1.9, z: 0.4}
 --- !u!1 &1635909211
 GameObject:
   m_ObjectHideFlags: 0
