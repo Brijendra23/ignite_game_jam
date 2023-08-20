@@ -176,7 +176,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2811718687071142262, guid: fe92e8c358a71804daa36a07177c2944, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 0.42
       objectReference: {fileID: 0}
     - target: {fileID: 2811718687071142262, guid: fe92e8c358a71804daa36a07177c2944, type: 3}
       propertyPath: m_LocalPosition.y
@@ -184,7 +184,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2811718687071142262, guid: fe92e8c358a71804daa36a07177c2944, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 10.45
+      value: 16.48
       objectReference: {fileID: 0}
     - target: {fileID: 2811718687071142262, guid: fe92e8c358a71804daa36a07177c2944, type: 3}
       propertyPath: m_LocalRotation.w
@@ -706,6 +706,7 @@ MonoBehaviour:
   isGrounded: 0
   gravityModifier: 1.5
   playerAnim: {fileID: 0}
+  hasDied: 0
 --- !u!54 &1001940961
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -764,6 +765,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a63e7f9c40ef6bd40b8692effb69e79a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  obstacle:
+  - {fileID: 1411162121984796096, guid: 5dd713f4f96b47c488a2a86e8bab2841, type: 3}
+  - {fileID: 1411162121984796096, guid: 0b2ceb4ed37a79f45a44b92ff70e265c, type: 3}
+  - {fileID: 1411162121984796096, guid: 192ca10f03fc7234b9a7aaf87d2fd5de, type: 3}
+  - {fileID: 1222257944689324760, guid: 8600e8bb0af1b774bae3d8cf69e09118, type: 3}
+  - {fileID: 5068962177257701939, guid: 22ede43421c2faa41b29d7f4859ab7a9, type: 3}
+  player: {fileID: 1001940957}
+  spawnX: 10
 --- !u!4 &1309564454
 Transform:
   m_ObjectHideFlags: 0
@@ -794,6 +803,7 @@ GameObject:
   - component: {fileID: 1324395485}
   - component: {fileID: 1324395484}
   - component: {fileID: 1324395490}
+  - component: {fileID: 1324395491}
   m_Layer: 6
   m_Name: Plane
   m_TagString: Untagged
@@ -933,3 +943,17 @@ MonoBehaviour:
   - {fileID: 1481997068777446, guid: cf782ee04eec8b34bb78b9bcf9dab92a, type: 3}
   - {fileID: 1820578872569314, guid: 8459d2d575caf3742b837875922c5e95, type: 3}
   player: {fileID: 1001940957}
+--- !u!114 &1324395491
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1324395483}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5902a9696844fc45b32b0a1066a4a6f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speedIncrease: 0.02
+  speed: 10
