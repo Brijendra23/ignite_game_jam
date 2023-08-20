@@ -99,6 +99,7 @@ GameObject:
   - component: {fileID: 65139842984797916}
   - component: {fileID: 65378719605300952}
   - component: {fileID: 65338318846510668}
+  - component: {fileID: -8492749228699734185}
   m_Layer: 0
   m_Name: rus_build_5et_03a
   m_TagString: Building
@@ -232,6 +233,20 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 8, y: 32, z: 38}
   m_Center: {x: 44, y: 28, z: 0}
+--- !u!114 &-8492749228699734185
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1042920087882922}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5902a9696844fc45b32b0a1066a4a6f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speedIncrease: 0.02
+  speed: 10
 --- !u!1 &1426669012569730
 GameObject:
   m_ObjectHideFlags: 0

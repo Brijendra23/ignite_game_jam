@@ -11,6 +11,8 @@ public class Movement : MonoBehaviour
     public float gravityModifier;
     public Animator playerAnim;
     private bool left=false, middle=true, right=false,transit=false;
+
+    public bool hasDied = false;
     // Start is called before the first frame update
     void Start()
     {
