@@ -23,8 +23,16 @@ public class Movement : MonoBehaviour
     void Update()
     {
         // just to get user input from wasd or arrow keys
-
+        if (speed < 50)
+        {
+            speed += 0.01f;
+        }
         Vector3 player_position = transform.position;
+        if (playerAnim.speed < 1.75)
+        {
+            playerAnim.speed += 0.001f;
+        }
+            print(speed +","+ playerAnim.speed);
         if(Input.GetKeyDown(KeyCode.RightArrow))
         {
             if (left)
